@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LOGIN_PDM.MainPage"
+             Title="🏠 Principal"
+             BackgroundColor="#52de97">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10" Margin="20">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#52de97" Offset="0.0"/>
+                    <!-- Verde fluorescente -->
+                    <GradientStop Color="#f9d648" Offset="0.5"/>
+                    <!-- Amarillo naranja -->
+                    <GradientStop Color="#f85d57" Offset="1.0"/>
+                    <!-- Rojo -->
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Frame Margin="10"
+                       BorderColor="#192a56"
+                       CornerRadius="150"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       IsClippedToBounds="True"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+                    <Image Source="iconologin.png"
+                           BackgroundColor="#ffffff"
+                           Aspect="AspectFill"
+                           Margin="-8"
+                           HeightRequest="100"
+                           WidthRequest="100" />
+                </Frame>
+
+                <Entry Placeholder="Usuario"
+                       PlaceholderColor="Blue"
+                       BackgroundColor="GreenYellow"
+                       TextColor="Red"
+                       FontSize="25"
+                       HorizontalTextAlignment="Center"
+                       Margin="20"
+                       x:Name="txtUsuario" />
+
+                <Entry Placeholder="Password"
+                       PlaceholderColor="Blue"
+                       BackgroundColor="GreenYellow"
+                       IsPassword="True"
+                       TextColor="#192a56"
+                       FontSize="25"
+                       HorizontalTextAlignment="Center"
+                       Margin="20"
+                       x:Name="txtPassword" />
+
+                <StackLayout Orientation="Vertical"
+                             HeightRequest="120"
+                             Padding="10"
+                             Margin="90">
+                    <StackLayout Spacing="0"
+                                 Orientation="Horizontal"
+                                 HorizontalOptions="Center"
+                                 Padding="10">
+                        <ImageButton Margin="10"
+                             Source="aceptar.png"
+                             HeightRequest="70"
+                             WidthRequest="70"
+                             x:Name="btnOk"
+                             Clicked="btnOk_Clicked" />
+
+
+                        <ImageButton Margin="10"
+                                     Source="no.png"
+                                     HeightRequest="70"
+                                     WidthRequest="70"
+                                     x:Name="btnNo" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
